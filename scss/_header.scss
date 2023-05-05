@@ -1,0 +1,42 @@
+
+.navbar {
+    position: fixed;
+    background-color: #222;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+
+    .nav-pills {
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav a {
+        color: #2fac66;;
+        text-decoration: none;
+        padding: 7px 15px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav.active {
+        background-color: #2fac66;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav.active a {
+        color: #000;
+    }
+
+    .nav.active .container {
+        padding: 10px 0;
+    }
+
+    .nav a.current,
+    .nav a:hover {
+        color: #2fac66;
+        font-weight: bold;
+    }
+}
