@@ -1,0 +1,172 @@
+
+// Estilos generales
+body {
+  margin: 0;
+  padding: 0;
+}
+// Estilos del contenido principal
+main {
+  padding: 20px;
+
+  // Diseño responsivo para dispositivos móviles
+  @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+// Estilos de los jugadores
+.player {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+
+  // Diseño responsivo para dispositivos móviles
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  
+  img {
+    width: $player-image-size;
+    height: $player-image-size;
+  
+
+    // Diseño responsivo para dispositivos móviles
+    @media (max-width: 768px) {
+      width: 400px;
+      height: 550px;
+    }
+  }
+
+  .nombre {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+}
+
+// diseño de la pagina de creadores de contenidos
+
+/* Reseting */
+.container{
+  transform-style: preserve-3d;
+}
+
+.container .box{
+  position: relative;
+  width: 400px;
+  height: 550px;
+  margin: 20px;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.container .box .body{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: 0.9s ease;
+}
+
+
+.container .box .body .imgContainer{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.container .box .body .imgContainer img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container .box .body .content{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+}
+
+.container .box:hover .body{
+  transform: rotateY(180deg);
+}
+
+.container .box .body .content div{
+  transform-style: preserve-3d;
+  padding: 20px;
+  background: linear-gradient(60deg, $color-primario, $color-primario);
+  transform: translateZ(100px);
+}
+
+.container .box .body .content div h3{
+  letter-spacing: 1px;
+}
+
+
+.tituloStaff {
+  text-align: center;
+  color: $color-secundario;
+}
+
+.TextoBodyStaff {
+  color: $color-secundario;
+  font: $tipografia-alternativa;
+}
+
+.fa-brands {
+  color: $color-primario;
+  text-align: center;
+}
+
+.fa-solid {
+  color: $color-primario;
+  text-align: center;
+}
+
+.imagenIndividualStaff {
+  width: 480;
+  height: 583;
+}
+.imagengrupoStaff{
+  width: 580;
+  height: 583;
+}
+
+.nombre {
+  color: $color-secundario;
+}
+
+.puesto {
+  color: $color-primario;
+}
+
+.logoinicio{
+  width: 100px;
+  height: 80px;
+}
+
+.titulo{
+  color: $color-primario;
+}
+.Texto{
+  font-size: $tipografia-alternativa;
+}
+.fab{
+  color: $color-texto;
+}

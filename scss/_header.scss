@@ -1,42 +1,67 @@
-
 .navbar {
-    position: fixed;
-    background-color: #222;
-    top: 0;
-    left: 0;
-    right: 0;
-    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 15px 50px;
+    
+
+    .dropdown-menu{
+        background-color: $color-Tercero;
+        border-radius: 0;
+        border: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        list-style-type: none;
+        gap: 20px;
+        .dropdown-item{
+            color: $color-secundario;
+            text-decoration: none;
+            padding: 7px 15px;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                color: $color-primario;
+                border-bottom: 4px $color-secundario;
+                transition: 0.5s;
+        }
+        }
+    }
 
     .nav-pills {
         display: flex;
-        list-style-type: none;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
-    }
-
-    .nav a {
-        color: #2fac66;;
-        text-decoration: none;
-        padding: 7px 15px;
+        padding: 20px 0;
         transition: all 0.3s ease-in-out;
-    }
+        list-style-type: none;
+        gap: 20px;
 
-    .nav.active {
-        background-color: #2fac66;
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-    }
+        .nav-item {
+            display: flex;
+            list-style-type: none;
+            align-items: center;
+            justify-content: center;
 
-    .nav.active a {
-        color: #000;
-    }
+            .nav-link {
+                color: $color-primario;
+                text-decoration: none;
+                padding: 7px 15px;
+                transition: all 0.3s ease-in-out;
 
-    .nav.active .container {
-        padding: 10px 0;
-    }
+                &:hover {
+                    color: $color-secundario;
+                    border-bottom: 4px $color-secundario;
+                    transition: 0.5s;
+                }
 
-    .nav a.current,
-    .nav a:hover {
-        color: #2fac66;
-        font-weight: bold;
+                &:hide {
+                    top: 70px;
+                }
+
+            }
+        }
     }
 }
