@@ -121,11 +121,11 @@ main {
 
 .tituloStaff {
   text-align: center;
-  color: $color-secundario;
+  color: $color-texto;
 }
 
 .TextoBodyStaff {
-  color: $color-secundario;
+  color: $color-texto;
   font: $tipografia-alternativa;
 }
 
@@ -169,4 +169,35 @@ main {
 }
 .fab{
   color: $color-texto;
+}
+
+/* Estilo para el contenedor del reproductor Plyr */
+.twitch-embed {
+  position: relative;
+  padding-bottom: 56.25%; /* Proporción 16:9 para el reproductor Plyr */
+  height: 0;
+  overflow: hidden;
+}
+
+/* Estilo para el reproductor de video en sí */
+.twitch-embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 854;
+  height: 480;
+}
+
+/* Estilo para el contenedor del reproductor Plyr en pantallas más grandes */
+@media (min-width: 768px) {
+  .twitch-embed {
+    padding-bottom: 40%; /* Proporción 4:3 para pantallas más grandes */
+  }
+}
+
+/* Estilo para el contenedor del reproductor Plyr en pantallas más pequeñas */
+@media (max-width: 767px) {
+  .twitch-embed {
+    padding-bottom: 56.25%; /* Proporción 16:9 para pantallas más pequeñas */
+  }
 }
