@@ -20,10 +20,10 @@ body {
     text-align: center;
     background-color: $color-tercero;
 
-    //@media (max-width: 768px) {
-    //height: 100%;
-    //width: auto
-    //}
+    @media (max-width: 768px) {
+    height: 100%;
+    width: auto
+    }
 }
 
 
