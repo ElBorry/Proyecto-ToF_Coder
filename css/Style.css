@@ -7,6 +7,11 @@
   font-family: "RigorMortis", sans-serif;
   src: url("https://fonts.cdnfonts.com/css/rigor-mortis");
 }
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .cuerpoweb {
   margin: 0;
   padding: 0;
@@ -22,6 +27,7 @@
   height: 100vh;
   text-decoration: none;
   text-align: center;
+  background-color: #1D1D1B;
 }
 
 .navbar {
@@ -31,6 +37,8 @@
   align-items: center;
   gap: 50px;
   padding: 15px 50px;
+  font-family: "Expansiva", sans-serif;
+  color: white;
 }
 .navbar .dropdown-menu {
   background-color: #1D1D1B;
@@ -51,7 +59,7 @@
 }
 .navbar .dropdown-menu .dropdown-item:hover {
   color: #2fac66;
-  border-bottom: 4px #FCEA10;
+  border-bottom: 4px solid #FCEA10;
   transition: 0.5s;
 }
 .navbar .nav-pills {
@@ -77,55 +85,25 @@
 }
 .navbar .nav-pills .nav-item .nav-link:hover {
   color: #FCEA10;
-  border-bottom: 4px #FCEA10;
+  border-bottom: 4px solid #2fac66;
   transition: 0.5s;
 }
-.navbar .nav-pills .nav-item .nav-link:hide {
-  top: 70px;
-}
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-main {
-  padding: 20px;
-}
 @media (max-width: 768px) {
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-.player {
-  display: inline-block;
-  text-align: center;
-  margin: 20px;
-}
-@media (max-width: 768px) {
-  .player {
+  .container .box {
     width: 100%;
+    height: auto;
+  }
+  .container .box .body .imgContainer img {
+    height: 200px;
+  }
+  .container .box .body .content {
+    padding: 10px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
-.player img {
-  width: 600px;
-  height: 600px;
-}
-@media (max-width: 768px) {
-  .player img {
-    width: 400px;
-    height: 550px;
-  }
-}
-.player .nombre {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-/* Reseting */
 .container {
   transform-style: preserve-3d;
 }
@@ -239,7 +217,7 @@ main {
 }
 
 .titulo {
-  color: #FCEA10;
+  color: #2fac66;
 }
 
 .Texto {

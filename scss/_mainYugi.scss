@@ -1,58 +1,29 @@
+// Ajuste para pantallas más pequeñas (máximo ancho de 768px)
+@media (max-width: 768px) {
+  .container .box {
+    width: 100%; // Hacer que los boxes ocupen el ancho completo de la pantalla
+    height: auto; // Permitir que la altura se ajuste automáticamente al contenido
+  }
 
-// Estilos generales
-body {
-  margin: 0;
-  padding: 0;
-}
-// Estilos del contenido principal
-main {
-  padding: 20px;
+  .container .box .body .imgContainer img {
+    height: 200px; // Ajustar la altura de la imagen para que se muestre correctamente en pantallas pequeñas
+  }
 
-  // Diseño responsivo para dispositivos móviles
-  @media (max-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  .container .box .body .content {
+    padding: 10px; // Reducir el padding en pantallas pequeñas para evitar recortes de contenido
+    position: relative;
+    top: 50%; // Mover el contenido hacia abajo en un 50% de la altura del contenedor
+    transform: translateY(-50%); // Volver a mover el contenido hacia arriba en un 50% de su propia altura para centrarlo verticalmente
   }
 }
 
-// Estilos de los jugadores
-.player {
-  display: inline-block;
-  text-align: center;
-  margin: 20px;
+// Resto del código del archivo _mainYugi.scss...
 
-  // Diseño responsivo para dispositivos móviles
-  @media (max-width: 768px) {
-    width: 100%;
-  }
-  
-  img {
-    width: $player-image-size;
-    height: $player-image-size;
-  
-
-    // Diseño responsivo para dispositivos móviles
-    @media (max-width: 768px) {
-      width: 400px;
-      height: 550px;
-    }
-  }
-
-  .nombre {
-    margin-top: 10px;
-    font-weight: bold;
-  }
-}
-
-// diseño de la pagina de creadores de contenidos
-
-/* Reseting */
-.container{
+.container {
   transform-style: preserve-3d;
 }
 
-.container .box{
+.container .box {
   position: relative;
   width: 400px;
   height: 550px;
@@ -62,7 +33,7 @@ main {
   cursor: pointer;
 }
 
-.container .box .body{
+.container .box .body {
   position: absolute;
   top: 0;
   left: 0;
@@ -72,8 +43,7 @@ main {
   transition: 0.9s ease;
 }
 
-
-.container .box .body .imgContainer{
+.container .box .body .imgContainer {
   position: absolute;
   top: 0;
   left: 0;
@@ -82,7 +52,7 @@ main {
   transform-style: preserve-3d;
 }
 
-.container .box .body .imgContainer img{
+.container .box .body .imgContainer img {
   position: absolute;
   top: 0;
   left: 0;
@@ -91,7 +61,7 @@ main {
   object-fit: cover;
 }
 
-.container .box .body .content{
+.container .box .body .content {
   position: absolute;
   top: 0;
   left: 0;
@@ -103,39 +73,41 @@ main {
   transform: rotateY(180deg);
 }
 
-.container .box:hover .body{
+.container .box:hover .body {
   transform: rotateY(180deg);
 }
 
-.container .box .body .content div{
+.container .box .body .content div {
   transform-style: preserve-3d;
   padding: 20px;
-  background: linear-gradient(60deg, $color-primario, $color-primario);
+  background: linear-gradient(60deg, #2fac66, #2fac66);
   transform: translateZ(100px);
 }
 
-.container .box .body .content div h3{
+.container .box .body .content div h3 {
   letter-spacing: 1px;
 }
 
-
 .tituloStaff {
   text-align: center;
-  color: $color-texto;
+  color: white;
 }
 
+// ... (resto del código)
+// _mainYugi.scss (continuación)
+
 .TextoBodyStaff {
-  color: $color-texto;
-  font: $tipografia-alternativa;
+  color: white;
+  font: "RigorMortis", sans-serif;
 }
 
 .fa-brands {
-  color: $color-primario;
+  color: #2fac66;
   text-align: center;
 }
 
 .fa-solid {
-  color: $color-primario;
+  color: #2fac66;
   text-align: center;
 }
 
@@ -143,32 +115,35 @@ main {
   width: 480;
   height: 583;
 }
-.imagengrupoStaff{
+
+.imagengrupoStaff {
   width: 580;
   height: 583;
 }
 
 .nombre {
-  color: $color-secundario;
+  color: #FCEA10;
 }
 
 .puesto {
-  color: $color-primario;
+  color: #2fac66;
 }
 
-.logoinicio{
+.logoinicio {
   width: 100px;
   height: 80px;
 }
 
-.titulo{
-  color: $color-secundario;
+.titulo {
+  color: #2fac66;
 }
-.Texto{
-  font-size: $tipografia-alternativa;
+
+.Texto {
+  font-size: "RigorMortis", sans-serif;
 }
-.fab{
-  color: $color-texto;
+
+.fab {
+  color: white;
 }
 
 /* Estilo para el contenedor del reproductor Plyr */
@@ -194,11 +169,9 @@ main {
     padding-bottom: 40%; /* Proporción 4:3 para pantallas más grandes */
   }
 }
-
 /* Estilo para el contenedor del reproductor Plyr en pantallas más pequeñas */
 @media (max-width: 767px) {
   .twitch-embed {
     padding-bottom: 56.25%; /* Proporción 16:9 para pantallas más pequeñas */
   }
 }
-

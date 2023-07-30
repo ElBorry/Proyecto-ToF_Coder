@@ -1,3 +1,5 @@
+// _header.scss
+
 .navbar {
     background-color: transparent;
     display: flex;
@@ -5,10 +7,11 @@
     align-items: center;
     gap: 50px;
     padding: 15px 50px;
-    
+    font-family: $tipografia-general;
+    color: $color-texto;
 
-    .dropdown-menu{
-        background-color: $color-Tercero;
+    .dropdown-menu {
+        background-color: $color-tercero;
         border-radius: 0;
         border: none;
         padding: 0;
@@ -17,16 +20,18 @@
         transition: all 0.3s ease-in-out;
         list-style-type: none;
         gap: 20px;
-        .dropdown-item{
+
+        .dropdown-item {
             color: $color-secundario;
             text-decoration: none;
             padding: 7px 15px;
             transition: all 0.3s ease-in-out;
+
             &:hover {
                 color: $color-primario;
-                border-bottom: 4px $color-secundario;
+                border-bottom: 4px solid $color-secundario;
                 transition: 0.5s;
-        }
+            }
         }
     }
 
@@ -53,14 +58,9 @@
 
                 &:hover {
                     color: $color-secundario;
-                    border-bottom: 4px $color-secundario;
+                    border-bottom: 4px solid $color-primario;
                     transition: 0.5s;
                 }
-
-                &:hide {
-                    top: 70px;
-                }
-
             }
         }
     }
