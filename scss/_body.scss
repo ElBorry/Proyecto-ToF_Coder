@@ -1,4 +1,4 @@
-.cuerpoweb{
+.cuerpoweb {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,5 +13,12 @@
     height: 100vh;
     text-decoration: none;
     text-align: center;
-    }
+
+    //@media (max-width: 768px) {
+    //height: 100%;
+    //width: auto
+    //}
+}
+
+
 
